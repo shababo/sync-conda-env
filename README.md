@@ -5,8 +5,8 @@ This pre-commit hook makes sure the `environment.yml` in the repo root is up to 
 To use it, add the following to your `.pre-commit-config.yaml`:
 
 ```yaml
-- repo: https://github.com/RoyalTS/sync-conda-env
-  rev: v0.1.0
+- repo: https://github.com/shababo/sync-conda-env
+  rev: v0.2.0
   hooks:
   - id: sync-conda-env
 ```
