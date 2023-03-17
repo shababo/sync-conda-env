@@ -8,7 +8,8 @@ EXPORT_ARGS=$1
 
 echo "Checking Conda environment '$CONDA_DEFAULT_ENV' for changes..."
 
-CONDA_YAML=$(conda env export $EXPORT_ARGS | grep -v "prefix")
+CONDA_YAML=$(mamba env export $EXPORT_ARGS | grep -v "prefix")
+CONDA_YAML=$
 DIFF=$(echo "$CONDA_YAML" | git diff --no-index -- "$ENV_FILE" -)
 
 if [ "$DIFF" != "" ]
